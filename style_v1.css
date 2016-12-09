@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Concert+One);
 @import url(http://fonts.googleapis.com/css?family=Advent+Pro:300);
 @font-face {
     font-family: DroidSerif;
@@ -65,13 +66,12 @@
 html,body {
   height: 100%;
   margin:0;padding:0;
-  background: #C8893D;
+  background: #fff url(bg_texture.png);
   color: rgba(132, 206, 66, 1);
 }
 body {
   /*font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;*/
   font-family: 'Advent Pro', Verdana, sans-serif;
-  overflow-x: hidden;
 }
 
 .show.time_slide {
