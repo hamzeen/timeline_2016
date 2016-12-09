@@ -13,14 +13,14 @@
     /*text-transform: uppercase;*/
     color: #fff;
     /*color: #2C91DE;*/
-    font-size: 17.1vh;
+    font-size: 16vh;
     line-height: 1;
     text-align: left;
     transform: translateX(-100vh) ;
     margin: 10px;
 }
 .intro.show {
-  transform: translateX(5vh);
+  transform: translateX(4vh);
   -webkit-transition: opacity .75s cubic-bezier(.215,.61,.355,1),
     -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
   transition: opacity .75s cubic-bezier(.215,.61,.355,1),
