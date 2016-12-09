@@ -1,0 +1,41 @@
+.slide-progress-container {
+  position: fixed;
+  transform: scaleX(0);
+  bottom: 20px;
+  height: 1px;
+  width: 70%;
+  z-index: 753;
+  overflow: hidden;
+  margin: auto 15%;
+
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
+.slide-progress-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+.show.slide-progress-container {
+  transform: scaleX(1);
+  transform-origin: x-axis;
+  -webkit-transition: transform .6s ease-in-out;
+  -moz-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  -ms-transition: transform .6s ease-in-out;
+  -o-transition: transform .6s ease-in-out;
+}
+.slide-progress {
+  position: absolute;
+  height: 100%;
+  background-color: #ff0;
+  width: 100%;
+  left: -100%;
+  top: 0;
+}

@@ -46,7 +46,7 @@
     text-align: center;
     transform: rotateX(90deg);
     width: 80%;
-	  margin-top: -20px;
+	  margin-top: -10px;
 	  margin-left: -10px;
 }
 .secondary.show {
@@ -86,6 +86,19 @@
 }
 @media screen and (min-width: 780px){
   .secondary {
-      font-size: 46px;
+      font-size: 44px;
+      width:50%;
+      margin-top: 2px;
+  }
+}
+
+@media screen and (max-height: 360px){
+  .intro-container {
+      margin: 3% auto;
+  }
+  .secondary {
+      font-size: 21px;
+      width:60%;
+      margin-top: 0px;
   }
 }
