@@ -51,11 +51,11 @@ var stickyHeaders = (function() {
 $(document).ready(function() {
   setTimeout(function() {
     $(".intro").addClass("show");
-  }, 900);
+  }, 500);
 
   setTimeout(function() {
     $(".secondary").addClass("show");
-  }, 1750);
+  }, 1350);
 });
 
 $(function() {

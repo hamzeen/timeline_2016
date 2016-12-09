@@ -1,65 +1,6 @@
-/*.intro-container {
-  border:1px solid #ff0;
-  height:70vh;
-  overflow:hidden;
-  margin-top: 1px;
-}
-.intro {
-    font-weight: 200;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 18vh;
-    line-height: 1;
-    text-align: left;
-    transform: translateX(-90vh) ;
-    margin: 20px;
-}
-.intro.show {
-  transform: translateX(7vh);
-  -webkit-transition: opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-  transition: opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-  transition: transform .6s cubic-bezier(.215,.61,.355,1),
-    opacity .75s cubic-bezier(.215,.61,.355,1);
-  transition: transform .6s cubic-bezier(.215,.61,.355,1),
-    opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-}
-
-.u-block-1,.u-block-2{
-    display: block;
-}
-
-.secondary {
-    font-weight: 200;
-    color: #fff;
-    font-size: 34px;
-    line-height: 1;
-    text-align: left;
-    transform: rotateX(90deg);
-    position:absolute;
-    top: 33.5vh;
-    left: 12vw;
-}
-
-.secondary.show {
-    transform: rotateX(0deg);
-  -webkit-transition: opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-  transition: opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-  transition: transform .6s cubic-bezier(.215,.61,.355,1),
-    opacity .75s cubic-bezier(.215,.61,.355,1);
-  transition: transform .6s cubic-bezier(.215,.61,.355,1),
-    opacity .75s cubic-bezier(.215,.61,.355,1),
-    -webkit-transform .6s cubic-bezier(.215,.61,.355,1);
-  transiton-delay:.2s;
-}*/
-
 .slide-progress-container {
   position: fixed;
-  transform: translateX(-200%);
+  transform: scaleX(0);
   bottom: 20px;
   height: 1px;
   width: 70%;
@@ -82,7 +23,7 @@
   opacity: 0.5;
 }
 .show.slide-progress-container {
-  transform: translateX(0%);
+  transform: scaleX(1);
   transform-origin: x-axis;
   -webkit-transition: transform .6s ease-in-out;
   -moz-transition: transform .6s ease-in-out;
