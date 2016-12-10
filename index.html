@@ -1,32 +1,61 @@
 <html><head>
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="stylesheet" type="text/css" href="styles/landing_text.css">
+<link rel="stylesheet" type="text/css" href="styles/modal.css">
 <link rel="stylesheet" type="text/css" href="styles/scene_progress.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/toolkit.js"></script>
 </head><body>
 
   <header>
-	<!--<h1>Travel Log 2016</h1>
-	<nav>&nbsp;</nav>//-->
-  <div class="intro-container">
+	<div class="intro-container">
     <h2 class="intro">
       <span class="u-block-1">Trips of</span>
-      <span class="u-block-2">2016</span>
-    </h2>
+      <span class="u-block-2">2016</span></h2>
     <h2 class="secondary">In Review</h2>
   </div>
   </header>
 
   <div class="slide-progress-container">
-  <div class="slide-progress"
-         style="transform: translate3d(50%, 0px, 0px);"></div>
+  <div class="slide-progress" style="transform: translate3d(50%, 0px, 0px);"></div>
   </div>
 
   <div>
     <div class="followMeBar">CBD, Singapore</div>
     <div style="height:100%;background:url(img/sg_cbd_001.jpg);background-size:cover;">
-      <div class="btn_more"></div>
+
+      <div id="sg_overlay_wrap" class="overlay_wrap"><!-- style="height: calc(100vh - 80px);">//-->
+        <a><div id="sg_overlay_close" class="overlay_close">back to timeline <span class="close">☓</span></div></a>
+      <div id="sg_overlay_bg" class="overlay_bg">
+        <div class="info_cover" style="display: block;">
+          <div id="sg_slides" class="info_cover_pic"><img width="373px" src="slides/sg_001.jpg"></div>
+            <div class="info_cover_text">
+              <div class="info_cover_captial">Things to do</div>
+                <div class="things_to_do">
+                  <h1 ref='sg_001.jpg'>Gardens by the bay</h1>
+                  <h1 ref='sg_002.jpg'>Ion Sky, Orchard</h1>
+                  <h1 ref='sg_003.jpg'>Singapore River Cruise</h1>
+                  <h1 ref='sg_004.jpg'>Singapore Flyer</h1>
+                  <h1 ref='sg_001.jpg'>Singapore Botanic Gardens</h1>
+                  <h1 ref='sg_002.jpg'>Jurong Bird Park</h1>
+                </div>
+            </div>
+        </div>
+        <div class="fact_box" style="display: block;">
+            <div class="fact_box_para">
+                <h2>Fact box</h2>
+                 <div class="info_cover_divide"></div>
+                <p>Though physically small, this red-dot is an economic giant.
+                  It has been Southeast Asia's most modern city for over a century.
+                  The city blends Malay, Chinese, Arab, Indian and English cultures and religions.
+                  Its unique ethnic tapestry affords visitors a wide array of sightseeing and culinary
+                  opportunities from which to choose. A full calendar of traditional festivals and holidays
+                  celebrated throughout the year adds to its cultural appeal.</p>
+            </div>
+        </div>
+      </div></div>
+
+      <div id="sg_btn_more" class="btn_more"></div>
     </div>
   </div>
 
@@ -44,11 +73,37 @@
     </div>
   </div>
 
+
   <div>
     <div class="followMeBar">Jakarta, Indonesia</div>
     <div style="height:100%;background:url(img/jkt_001.jpg);background-size:cover;">
-      <div class="btn_more"></div>
+
+      <!--<div class="overlay_wrap show" style="height: 591px;">
+        <a><div class="overlay_close open">back to timeline <span class="close">X</span></div></a>
+      <div class="overlay_bg show">
+        <div class="info_cover" style="display: block;">
+          <div class="info_cover_pic"><img src="bg_texture.png"></div>
+            <div class="info_cover_text">
+              <div class="info_cover_captial">rulers</div>
+                <div class="things_to_do">
+                  <h1>Bahlul Lodi <span class="ruler_date">(1451 – 1489)</span></h1>
+                  <h1>Sikandar Lodi <span class="ruler_date">(1489 – 1517)</span></h1>
+                  <h1>Ibrahim Lodi <span class="ruler_date">(1489 – 1526)</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="fact_box" style="display: block;">
+            <div class="fact_box_para">
+                <h2>The Generous Gift</h2>
+                 <div class="info_cover_divide"></div>
+                <p>Ala-ud-Din of Bahlol was crowned emperor of Delhi after his father’s death.
+                  dynasty after defeating Ibrahim in the historic first battle of Panipat in 1526.<br><br>
+                  fact that for such a kind of onslaught, Lodis were defeated Mughal rule in Delhi.</p>
+            </div>
+        </div>
+      </div></div>//-->
+
+        <div class="btn_more"></div>
     </div>
   </div>
-
 </body></html>

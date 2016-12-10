@@ -112,7 +112,7 @@ body {
 .btn_more:hover {
     /*background-position: -2px -79px;*/
     background-color: rgba(200,137,61,.6);
-    border: 2px rgba(132, 206, 66, 1) solid;
+    border: 1px rgba(132, 206, 66, 1) solid;
     background-color: rgba(132, 206, 66, 1);
     /*background-color: rgba(11, 18, 6, .8);*/
 }
@@ -135,6 +135,12 @@ body {
     -ms-transition: background-color .3s ease-in-out,left 1s ease-in-out,opacity .8s ease-in-out;
     -o-transition: background-color .3s ease-in-out,left 1s ease-in-out,opacity .8s ease-in-out;
     z-index: 700;
+}
+.btn_more.transform {
+    left: 110%;
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg)
 }
 
 /* timeline slider */
