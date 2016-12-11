@@ -66,10 +66,9 @@ $(document).ready(function() {
 /* anonymous function for triggering all other animations & compoents appearances */
 $(function() {
 
-  // image slides for 'Things To Do'
+  // image slider for 'Things To Do'
   $(".things_to_do h1").click(function() {
     var src = $(this).attr('ref');
-
     /*$("#sg_slides img").animate({ "opacity": "0" }, "100" );
     $("#sg_slides img").attr('src','slides/'+$(this).attr('ref'));
     $("#sg_slides img").animate({ "opacity": "1" }, "500" );*/
@@ -81,31 +80,116 @@ $(function() {
   });
 
   // open overlay
-  $("#sg_btn_more").click(function() {
-    $(this).addClass("transform");
-    $("body").css({overflow: "hidden"});
-    $("#sg_overlay_bg").addClass("show");
-    $("#sg_overlay_wrap").addClass("show");
-    $(".overlay_close").addClass("open");
+  $(".btn_more").click(function() {
+    console.log("Idx: " + $('.btn_more').index(this));
+    var winTop = $(window).scrollTop();
+    if(winTop >= $(window).height() - 20) {
+      $(".slide-progress-container").removeClass("show");
+    }
+
+    switch($('.btn_more').index(this)) {
+
+      case 0: // open singapore overlay
+        console.log("Hello Singapore!");
+        $(this).addClass("transform");
+        $("body").css({overflow: "hidden"});
+        $("#sg_overlay_bg").addClass("show");
+        $("#sg_overlay_wrap").addClass("show");
+        $("#sg_overlay_close").addClass("open");
+      break;
+
+      case 1:// open chennai overlay
+        console.log("Hello Chennai!");
+        $(this).addClass("transform");
+        $("body").css({overflow: "hidden"});
+        $("#in_overlay_bg").addClass("show");
+        $("#in_overlay_wrap").addClass("show");
+        $("#in_overlay_close").addClass("open");
+      break;
+
+      case 2:// open malaysia overlay
+        console.log("Hello KL!");
+        $(this).addClass("transform");
+        $("body").css({overflow: "hidden"});
+        $("#my_overlay_bg").addClass("show");
+        $("#my_overlay_wrap").addClass("show");
+        $("#my_overlay_close").addClass("open");
+      break;
+
+      case 3:// open jakarta overlay
+        console.log("Hello Jakarta!");
+        $(this).addClass("transform");
+        $("body").css({overflow: "hidden"});
+        $("#jkt_overlay_bg").addClass("show");
+        $("#jkt_overlay_wrap").addClass("show");
+        $("#jkt_overlay_close").addClass("open");
+      break;
+
+      default:
+      break;
+    }
   });
 
   // close overlay
-  $("#sg_overlay_close").click(function() {
-    $("#sg_btn_more").removeClass("transform");
-    $("body").css({overflow: "auto"});
-    $("#sg_overlay_bg").removeClass("show");
-    $("#sg_overlay_wrap").removeClass("show");
-    $(this).removeClass("open");
+  $(".overlay_close").click(function() {
+    console.log("Idx: " + $('.overlay_close').index(this));
+    var winTop = $(window).scrollTop();
+    if(winTop >= $(window).height() - 20) {
+      $(".slide-progress-container").addClass("show");
+    }
+
+    switch($('.overlay_close').index(this)) {
+
+      case 0: // close singapore overlay
+        console.log("Closing Singapore!");
+        $("#sg_btn_more").removeClass("transform");
+        $("body").css({overflow: "auto"});
+        $("#sg_overlay_bg").removeClass("show");
+        $("#sg_overlay_wrap").removeClass("show");
+        $(this).removeClass("open");
+      break;
+
+      case 1: // close chennai overlay
+        console.log("Closing India!");
+        $("#in_btn_more").removeClass("transform");
+        $("body").css({overflow: "auto"});
+        $("#in_overlay_bg").removeClass("show");
+        $("#in_overlay_wrap").removeClass("show");
+        $(this).removeClass("open");
+      break;
+
+      case 2: // close malaysia overlay
+        console.log("Closing Malaysia!");
+        $("#my_btn_more").removeClass("transform");
+        $("body").css({overflow: "auto"});
+        $("#my_overlay_bg").removeClass("show");
+        $("#my_overlay_wrap").removeClass("show");
+        $(this).removeClass("open");
+      break;
+
+      case 3: // close jakarta overlay
+        console.log("Closing Indonesia!");
+        $("#jkt_btn_more").removeClass("transform");
+        $("body").css({overflow: "auto"});
+        $("#jkt_overlay_bg").removeClass("show");
+        $("#jkt_overlay_wrap").removeClass("show");
+        $(this).removeClass("open");
+      break;
+
+      default:
+      break;
+    }
   });
 
   stickyHeaders.load($(".followMeBar"));
   $(window).scroll(function() {
     var winTop = $(window).scrollTop();
-    /*if(winTop >= ($(window).height()/3)) {
-      $("body").addClass("sticky-header");
-    } else{
-      $("body").removeClass("sticky-header");
-    }*/ // earlier used for toggle scaling of intro text
+
+    if(winTop >= 20 && $(window).width() >= 280 && $(window).height() >= 220) {
+      $("#credits").css("height","50px");
+    } else {
+      $("#credits").css("height","0px");
+    }
 
     if(winTop >= $(window).height() - 20) {
       $(".slide-progress-container").addClass("show");

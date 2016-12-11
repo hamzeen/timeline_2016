@@ -13,11 +13,15 @@
     z-index: 0;
     overflow-y: hidden;
     pointer-events: none;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ccc;
 }
 
 /* overlay main container */
 .overlay_bg {
-    background-color: #e6e3db;
+    /*background-color: #e6e3db;*/
+    background-color: rgba(59, 68, 79,.95);
     height: auto;
     min-height: 550px;
     position: absolute;
@@ -36,9 +40,6 @@
     left: 0;
     margin-bottom: 50px;
 }
-/*.show {
-    left: 0;
-}*/
 
 @media (max-width: 1214px) and (min-width: 961px) {
   .overlay_bg {
@@ -132,8 +133,9 @@ a {
 
 /* widgets in the overlay */
 .info_cover {
-    background-color: #fff;
+    /*background-color: #fff;*/
     /*LC:: width: 485px;*/
+    background-color: rgba(0,0,0,.1);
     height: auto;
     min-height: 200px;
     position: relative;
@@ -150,7 +152,7 @@ a {
     overflow: hidden;
 }
 .fact_box {
-background-color: #fff;
+background-color: #C8893D;
 width: 400px;
 height: auto;
 min-height: 200px;
@@ -170,7 +172,7 @@ display: none;
 .info_cover_text {
     height: auto;
     min-height: 100px;
-    border: solid 1px #d3bda2;
+    /*border: solid 1px #d3bda2;*/
     margin-top: 10px;
     padding: 10px;
 }
@@ -185,13 +187,20 @@ display: none;
     padding-left: 10px;
 }
 .things_to_do h1:nth-child(even) {
-    background-color: rgba(203, 177, 144, .2);
+    background-color: rgba(20, 17, 14, .02);
+}
+
+.fact_box_para > .heading {
+  font-size: 28px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  font-family: "SC Sans Web";
 }
 .fact_box_para {
     width: auto;
-    border: solid 1px #d3bda2;
+    /*border: solid 1px #d3bda2;*/
     height: auto;
     min-height: 100px;
     padding: 15px;
-    color: #3d3630;
+    color: #FFF;
 }
