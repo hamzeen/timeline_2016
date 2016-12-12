@@ -185,6 +185,7 @@ display: none;
     margin-top: 3px;
     padding: 9px;
     padding-left: 10px;
+    cursor: pointer;
 }
 .things_to_do h1:nth-child(even) {
     background-color: rgba(20, 17, 14, .02);
@@ -198,9 +199,9 @@ display: none;
 }
 .fact_box_para {
     width: auto;
-    /*border: solid 1px #d3bda2;*/
     height: auto;
     min-height: 100px;
     padding: 15px;
     color: #FFF;
+    -webkit-font-smoothing: antialiased;
 }

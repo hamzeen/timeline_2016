@@ -67,7 +67,7 @@ $(document).ready(function() {
 $(function() {
 
   // image slider for 'Things To Do'
-  $(".things_to_do h1").click(function() {
+  $("#sg_things_to_do h1").click(function() {
     var src = $(this).attr('ref');
     /*$("#sg_slides img").animate({ "opacity": "0" }, "100" );
     $("#sg_slides img").attr('src','slides/'+$(this).attr('ref'));
@@ -77,6 +77,33 @@ $(function() {
       $("#sg_slides img").attr('src','slides/' + src);
       $("#sg_slides img").fadeTo("fast", 1.0);
     });
+  });
+
+  $("#ch_things_to_do h1").click(function() {
+    var src = $(this).attr('ref');
+    //$("#ch_slides img").fadeOut(function() {
+      $("#ch_slides img").fadeTo("0", .4);
+      $("#ch_slides img").attr('src','slides/' + src);
+      $("#ch_slides img").fadeTo("fast", 1.0);
+    //});
+  });
+
+  $("#kl_things_to_do h1").click(function() {
+    var src = $(this).attr('ref');
+    //$("#ch_slides img").fadeOut(function() {
+      $("#kl_slides img").fadeTo("0", .4);
+      $("#kl_slides img").attr('src','slides/' + src);
+      $("#kl_slides img").fadeTo("medium", 1.0);
+    //});
+  });
+
+  $("#jkt_things_to_do h1").click(function() {
+    var src = $(this).attr('ref');
+    //$("#ch_slides img").fadeOut(function() {
+      $("#jkt_slides img").fadeTo("0", .4);
+      $("#jkt_slides img").attr('src','slides/' + src);
+      $("#jkt_slides img").fadeTo("medium", 1.0);
+    //});
   });
 
   // open overlay
